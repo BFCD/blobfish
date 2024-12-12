@@ -108,7 +108,7 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("000006ecc8f69d7b6d802c863dea6776aa4223c003dddf7b63823905de828c02"));
         assert(genesis.hashMerkleRoot == uint256S("15311f55e6cddf44b64dbea08bb62c60109e66a0e4b612997c8840610da996b8"));
 
-        consensus.nKAWPOWActivation = 1734015619;
+        consensus.nKAWPOWActivation = 1733990822;
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;    // BLOBFISH starting difficulty is 1 / 2^12
