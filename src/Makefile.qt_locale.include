@@ -1,0 +1,15 @@
+QT_TS = \
+  qt/locale/blobfish_de.ts \
+  qt/locale/blobfish_en.ts \
+  qt/locale/blobfish_en_US.ts \
+  qt/locale/blobfish_es.ts \
+  qt/locale/blobfish_es_ES.ts \
+  qt/locale/blobfish_fr_FR.ts \
+  qt/locale/blobfish_hr_HR.ts \
+  qt/locale/blobfish_it.ts \
+  qt/locale/blobfish_ko_KR.ts \
+  qt/locale/blobfish_nl.ts \
+  qt/locale/blobfish_pl.ts \
+  qt/locale/blobfish_ru.ts \
+  qt/locale/blobfish_tr.ts \
+  qt/locale/blobfish_zh_CN.ts
