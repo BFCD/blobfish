@@ -243,7 +243,7 @@ done
 
 %if %{_buildqt}
 # qt icons
-install -D -p share/pixmaps/peppapow.ico %{buildroot}%{_datadir}/pixmaps/peppapow.ico
+install -D -p share/pixmaps/blobfish.ico %{buildroot}%{_datadir}/pixmaps/blobfish.ico
 install -p share/pixmaps/nsis-header.bmp %{buildroot}%{_datadir}/pixmaps/
 install -p share/pixmaps/nsis-wizard.bmp %{buildroot}%{_datadir}/pixmaps/
 install -p %{SOURCE100} %{buildroot}%{_datadir}/pixmaps/peppapow.svg
