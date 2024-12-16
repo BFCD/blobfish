@@ -1,4 +1,4 @@
-## BLOBFISHCOIN RELEASE
+## 🐟 BLOBFISHCOIN (SQSH)
 
 Blobfish Coin (SQSH) is a Proof of Work (PoW) cryptocurrency that prioritizes fairness, community engagement, and decentralization. Using the ASIC-resistant **KawPoW** algorithm, Blobfish Coin is accessible to everyday miners with GPU setups, keeping it decentralized and community-focused from the start.
 
@@ -29,8 +29,8 @@ Blobfish Coin is a meme with a mission: combining the internet’s love for the 
 ### Community Channels and Resources:
 Community resources where you can stay connected:
 
-- **New Website**: https://www.blobfishcoin.meme
-- **Bitcointalk:   
+- **Website**: https://www.blobfishcoin.meme
+- **Bitcointalk**:   
 - **Discord**:     https://discord.gg/3pZ2pbUtyG
 - **Telegram**:    
 - **Twitter**:     
