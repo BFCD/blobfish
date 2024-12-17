@@ -10,7 +10,7 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both blobfishd and peppapow-qt, to make it harder for attackers to
+ * for both blobfishd and blobfish-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
 const std::string CLIENT_NAME("BLOBFISH Core");

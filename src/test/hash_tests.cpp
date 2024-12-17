@@ -4,7 +4,7 @@
 
 #include "hash.h"
 #include "utilstrencodings.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 #include <vector>
 

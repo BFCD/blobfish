@@ -466,7 +466,7 @@ UniValue getnewaddress(const JSONRPCRequest& request)
             "1. \"label\"        (string, optional) The label name for the address to be linked to. if not provided, the default label \"\" is used. It can also be set to the empty string \"\" to represent the default label. The label does not need to exist, it will be created if there is no label by the given name.\n"
 
             "\nResult:\n"
-            "\"peppapowaddress\"    (string) The new peppapow address\n"
+            "\"blobfishaddress\"    (string) The new blobfish address\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getnewaddress", "") + HelpExampleRpc("getnewaddress", ""));
@@ -487,7 +487,7 @@ UniValue getnewstakingaddress(const JSONRPCRequest& request)
 
 
             "\nResult:\n"
-            "\"peppapowaddress\"    (string) The new peppapow address\n"
+            "\"blobfishaddress\"    (string) The new blobfish address\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getnewstakingaddress", "") + HelpExampleRpc("getnewstakingaddress", ""));
@@ -674,7 +674,7 @@ UniValue getaccountaddress(const JSONRPCRequest& request)
             "1. \"account\"       (string, required) The account for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.\n"
 
             "\nResult:\n"
-            "\"peppapowaddress\"   (string) The account peppapow address.\n"
+            "\"blobfishaddress\"   (string) The account blobfish address.\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getaccountaddress", "") + HelpExampleCli("getaccountaddress", "\"\"") +
@@ -735,11 +735,11 @@ UniValue setlabel(const JSONRPCRequest& request)
 
     if (request.fHelp || request.params.size() != 2)
         throw std::runtime_error(
-            "setlabel \"peppapowaddress\" \"label\"\n"
+            "setlabel \"blobfishaddress\" \"label\"\n"
             "\nSets the label associated with the given address.\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"   (string, required) The peppapow address to be associated with a label.\n"
+            "1. \"blobfishaddress\"   (string, required) The blobfish address to be associated with a label.\n"
             "2. \"label\"         (string, required) The label to assign to the address.\n"
 
             "\nExamples:\n" +
@@ -792,11 +792,11 @@ UniValue getaccount(const JSONRPCRequest& request)
 
     if (request.fHelp || request.params.size() != 1)
         throw std::runtime_error(
-            "getaccount \"peppapowaddress\"\n"
+            "getaccount \"blobfishaddress\"\n"
             "\nDEPRECATED. Returns the account associated with the given address.\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"  (string, required) The peppapow address for account lookup.\n"
+            "1. \"blobfishaddress\"  (string, required) The blobfish address for account lookup.\n"
 
             "\nResult:\n"
             "\"accountname\"        (string) the account address\n"
@@ -837,7 +837,7 @@ UniValue getaddressesbyaccount(const JSONRPCRequest& request)
 
             "\nResult:\n"
             "[                     (json array of string)\n"
-            "  \"peppapowaddress\"  (string) a peppapow address associated with the given account\n"
+            "  \"blobfishaddress\"  (string) a blobfish address associated with the given account\n"
             "  ,...\n"
             "]\n"
 
@@ -896,12 +896,12 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 4)
         throw std::runtime_error(
-            "sendtoaddress \"peppapowaddress\" amount ( \"comment\" \"comment-to\" )\n"
+            "sendtoaddress \"blobfishaddress\" amount ( \"comment\" \"comment-to\" )\n"
             "\nSend an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"  (string, required) The peppapow address to send to.\n"
+            "1. \"blobfishaddress\"  (string, required) The blobfish address to send to.\n"
             "2. \"amount\"      (numeric, required) The amount in BLOBFISH to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
@@ -1044,9 +1044,9 @@ UniValue delegatestake(const JSONRPCRequest& request)
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"stakingaddress\"      (string, required) The peppapow staking address to delegate.\n"
+            "1. \"stakingaddress\"      (string, required) The blobfish staking address to delegate.\n"
             "2. \"amount\"              (numeric, required) The amount in BLOBFISH to delegate for staking. eg 100\n"
-            "3. \"owneraddress\"        (string, optional) The peppapow address corresponding to the key that will be able to spend the stake. \n"
+            "3. \"owneraddress\"        (string, optional) The blobfish address corresponding to the key that will be able to spend the stake. \n"
             "                               If not provided, or empty string, a new wallet address is generated.\n"
             "4. \"fExternalOwner\"      (boolean, optional, default = false) use the provided 'owneraddress' anyway, even if not present in this wallet.\n"
             "                               WARNING: The owner of the keys to 'owneraddress' will be the only one allowed to spend these coins.\n"
@@ -1089,9 +1089,9 @@ UniValue rawdelegatestake(const JSONRPCRequest& request)
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"stakingaddress\"      (string, required) The peppapow staking address to delegate.\n"
+            "1. \"stakingaddress\"      (string, required) The blobfish staking address to delegate.\n"
             "2. \"amount\"              (numeric, required) The amount in BLOBFISH to delegate for staking. eg 100\n"
-            "3. \"owneraddress\"        (string, optional) The peppapow address corresponding to the key that will be able to spend the stake. \n"
+            "3. \"owneraddress\"        (string, optional) The blobfish address corresponding to the key that will be able to spend the stake. \n"
             "                               If not provided, or empty string, a new wallet address is generated.\n"
             "4. \"fExternalOwner\"      (boolean, optional, default = false) use the provided 'owneraddress' anyway, even if not present in this wallet.\n"
             "                               WARNING: The owner of the keys to 'owneraddress' will be the only one allowed to spend these coins.\n"
@@ -1125,7 +1125,7 @@ UniValue rawdelegatestake(const JSONRPCRequest& request)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"peppapowaddress\"        (string) peppapow address\n"
+            "           \"blobfishaddress\"        (string) blobfish address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -1156,12 +1156,12 @@ UniValue sendtoaddressix(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 4)
         throw std::runtime_error(
-            "sendtoaddressix \"peppapowaddress\" amount ( \"comment\" \"comment-to\" )\n"
+            "sendtoaddressix \"blobfishaddress\" amount ( \"comment\" \"comment-to\" )\n"
             "\nSend an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"  (string, required) The peppapow address to send to.\n"
+            "1. \"blobfishaddress\"  (string, required) The blobfish address to send to.\n"
             "2. \"amount\"      (numeric, required) The amount in BLOBFISH to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
@@ -1214,7 +1214,7 @@ UniValue listaddressgroupings(const JSONRPCRequest& request)
             "[\n"
             "  [\n"
             "    [\n"
-            "      \"peppapowaddress\",     (string) The peppapow address\n"
+            "      \"blobfishaddress\",     (string) The blobfish address\n"
             "      amount,                 (numeric) The amount in BLOBFISH\n"
             "      \"label\"             (string, optional) The label\n"
             "    ]\n"
@@ -1251,12 +1251,12 @@ UniValue signmessage(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() != 2)
         throw std::runtime_error(
-            "signmessage \"peppapowaddress\" \"message\"\n"
+            "signmessage \"blobfishaddress\" \"message\"\n"
             "\nSign a message with the private key of an address" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"  (string, required) The peppapow address to use for the private key.\n"
+            "1. \"blobfishaddress\"  (string, required) The blobfish address to use for the private key.\n"
             "2. \"message\"         (string, required) The message to create a signature of.\n"
 
             "\nResult:\n"
@@ -1306,11 +1306,11 @@ UniValue getreceivedbyaddress(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() < 1 || request.params.size() > 2)
         throw std::runtime_error(
-            "getreceivedbyaddress \"peppapowaddress\" ( minconf )\n"
-            "\nReturns the total amount received by the given peppapowaddress in transactions with at least minconf confirmations.\n"
+            "getreceivedbyaddress \"blobfishaddress\" ( minconf )\n"
+            "\nReturns the total amount received by the given blobfishaddress in transactions with at least minconf confirmations.\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"  (string, required) The peppapow address for transactions.\n"
+            "1. \"blobfishaddress\"  (string, required) The blobfish address for transactions.\n"
             "2. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.\n"
 
             "\nResult:\n"
@@ -1328,7 +1328,7 @@ UniValue getreceivedbyaddress(const JSONRPCRequest& request)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    // peppapow address
+    // blobfish address
     CTxDestination address = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(address))
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BLOBFISH address");
@@ -1650,14 +1650,14 @@ UniValue sendfrom(const JSONRPCRequest& request)
 
     if (request.fHelp || request.params.size() < 3 || request.params.size() > 7)
         throw std::runtime_error(
-            "sendfrom \"fromaccount\" \"topeppapowaddress\" amount ( minconf \"comment\" \"comment-to\" includeDelegated)\n"
-            "\nDEPRECATED (use sendtoaddress). Send an amount from an account to a peppapow address.\n"
+            "sendfrom \"fromaccount\" \"toblobfishaddress\" amount ( minconf \"comment\" \"comment-to\" includeDelegated)\n"
+            "\nDEPRECATED (use sendtoaddress). Send an amount from an account to a blobfish address.\n"
             "The amount is a real and is rounded to the nearest 0.00000001." +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
             "1. \"fromaccount\"       (string, required) The name of the account to send funds from. May be the default account using \"\".\n"
-            "2. \"topeppapowaddress\"  (string, required) The peppapow address to send funds to.\n"
+            "2. \"toblobfishaddress\"  (string, required) The blobfish address to send funds to.\n"
             "3. amount                (numeric, required) The amount in BLOBFISH. (transaction fee is added on top).\n"
             "4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "5. \"comment\"           (string, optional) A comment used to store what the transaction is for. \n"
@@ -1728,7 +1728,7 @@ UniValue sendmany(const JSONRPCRequest& request)
             "1. \"dummy\"               (string, required) Must be set to \"\" for backwards compatibility.\n"
             "2. \"amounts\"             (string, required) A json object with addresses and amounts\n"
             "    {\n"
-            "      \"address\":amount   (numeric) The peppapow address is the key, the numeric amount in BLOBFISH is the value\n"
+            "      \"address\":amount   (numeric) The blobfish address is the key, the numeric amount in BLOBFISH is the value\n"
             "      ,...\n"
             "    }\n"
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
@@ -1756,7 +1756,7 @@ UniValue sendmany(const JSONRPCRequest& request)
             "1. \"fromaccount\"         (string, required) DEPRECATED. The account to send the funds from. Should be \"\" for the default account\n"
             "2. \"amounts\"             (string, required) A json object with addresses and amounts\n"
             "    {\n"
-            "      \"address\":amount   (numeric) The peppapow address is the key, the numeric amount in BLOBFISH is the value\n"
+            "      \"address\":amount   (numeric) The blobfish address is the key, the numeric amount in BLOBFISH is the value\n"
             "      ,...\n"
             "    }\n"
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
@@ -1858,15 +1858,15 @@ UniValue addmultisigaddress(const JSONRPCRequest& request)
 
             "\nArguments:\n"
             "1. nrequired        (numeric, required) The number of required signatures out of the n keys or addresses.\n"
-            "2. \"keysobject\"   (string, required) A json array of peppapow addresses or hex-encoded public keys\n"
+            "2. \"keysobject\"   (string, required) A json array of blobfish addresses or hex-encoded public keys\n"
             "     [\n"
-            "       \"address\"  (string) peppapow address or hex-encoded public key\n"
+            "       \"address\"  (string) blobfish address or hex-encoded public key\n"
             "       ...,\n"
             "     ]\n"
             "3. \"label\"      (string, optional) A label to assign the addresses to.\n"
 
             "\nResult:\n"
-            "\"peppapowaddress\"  (string) A peppapow address associated with the keys.\n"
+            "\"blobfishaddress\"  (string) A blobfish address associated with the keys.\n"
 
             "\nExamples:\n"
             "\nAdd a multisig address from 2 addresses\n" +
@@ -2310,7 +2310,7 @@ UniValue listtransactions(const JSONRPCRequest& request)
             "\nResult:\n"
             "[\n"
             "  {\n"
-            "    \"address\":\"peppapowaddress\",    (string) The peppapow address of the transaction. Not present for \n"
+            "    \"address\":\"blobfishaddress\",    (string) The blobfish address of the transaction. Not present for \n"
             "                                                move transactions (category = move).\n"
             "    \"category\":\"send|receive|move\", (string) The transaction category. 'move' is a local (off blockchain)\n"
             "                                                transaction between accounts, and not associated with an address,\n"
@@ -2365,7 +2365,7 @@ UniValue listtransactions(const JSONRPCRequest& request)
             "  {\n"
             "    \"account\":\"accountname\",       (string) DEPRECATED. The account name associated with the transaction. \n"
             "                                                It will be \"\" for the default account.\n"
-            "    \"address\":\"peppapowaddress\",    (string) The peppapow address of the transaction. Not present for \n"
+            "    \"address\":\"blobfishaddress\",    (string) The blobfish address of the transaction. Not present for \n"
             "                                                move transactions (category = move).\n"
             "    \"category\":\"send|receive|move\", (string) The transaction category. 'move' is a local (off blockchain)\n"
             "                                                transaction between accounts, and not associated with an address,\n"
@@ -2580,7 +2580,7 @@ UniValue listsinceblock(const JSONRPCRequest& request)
             "{\n"
             "  \"transactions\": [\n"
             "    \"account\":\"accountname\",       (string) DEPRECATED. This field will be removed in v5.0. To see this deprecated field, start blobfishd with -deprecatedrpc=accounts. The account name associated with the transaction. Will be \"\" for the default account.\n"
-            "    \"address\":\"peppapowaddress\",    (string) The peppapow address of the transaction. Not present for move transactions (category = move).\n"
+            "    \"address\":\"blobfishaddress\",    (string) The blobfish address of the transaction. Not present for move transactions (category = move).\n"
             "    \"category\":\"send|receive\",     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.\n"
             "    \"amount\": x.xxx,          (numeric) The amount in BLOBFISH. This is negative for the 'send' category, and for the 'move' category for moves \n"
             "                                          outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.\n"
@@ -2677,7 +2677,7 @@ UniValue gettransaction(const JSONRPCRequest& request)
             "  \"details\" : [\n"
             "    {\n"
             "      \"account\" : \"accountname\",  (string) DEPRECATED.This field will be removed in v5.0. To see this deprecated field, start blobfishd with -deprecatedrpc=accounts. The account name involved in the transaction, can be \"\" for the default account.\n"
-            "      \"address\" : \"peppapowaddress\",   (string) The peppapow address involved in the transaction\n"
+            "      \"address\" : \"blobfishaddress\",   (string) The blobfish address involved in the transaction\n"
             "      \"category\" : \"send|receive\",    (string) The category, either 'send' or 'receive'\n"
             "      \"amount\" : x.xxx                  (numeric) The amount in BLOBFISH\n"
             "      \"vout\" : n,                       (numeric) the vout value\n"
@@ -3001,7 +3001,7 @@ UniValue encryptwallet(const JSONRPCRequest& request)
             "\nNow set the passphrase to use the wallet, such as for signing or sending BLOBFISHs\n" +
             HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
             "\nNow we can so something like sign\n" +
-            HelpExampleCli("signmessage", "\"peppapowaddress\" \"test message\"") +
+            HelpExampleCli("signmessage", "\"blobfishaddress\" \"test message\"") +
             "\nNow lock the wallet again by removing the passphrase\n" +
             HelpExampleCli("walletlock", "") +
             "\nAs a json rpc call\n" +
@@ -3032,7 +3032,7 @@ UniValue encryptwallet(const JSONRPCRequest& request)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; peppapow server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
+    return "wallet encrypted; blobfish server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
 }
 
 UniValue listunspent(const JSONRPCRequest& request)
@@ -3049,9 +3049,9 @@ UniValue listunspent(const JSONRPCRequest& request)
                 "\nArguments:\n"
                 "1. minconf          (numeric, optional, default=1) The minimum confirmations to filter\n"
                 "2. maxconf          (numeric, optional, default=9999999) The maximum confirmations to filter\n"
-                "3. \"addresses\"    (string) A json array of peppapow addresses to filter\n"
+                "3. \"addresses\"    (string) A json array of blobfish addresses to filter\n"
                 "    [\n"
-                "      \"address\"   (string) peppapow address\n"
+                "      \"address\"   (string) blobfish address\n"
                 "      ,...\n"
                 "    ]\n"
                 "4. watchonlyconfig  (numeric, optional, default=1) 1 = list regular unspent transactions, 2 = list only watchonly transactions,  3 = list all unspent transactions (including watchonly)\n"
@@ -3061,7 +3061,7 @@ UniValue listunspent(const JSONRPCRequest& request)
                 "  {\n"
                 "    \"txid\" : \"txid\",        (string) the transaction id\n"
                 "    \"vout\" : n,               (numeric) the vout value\n"
-                "    \"address\" : \"address\",  (string) the peppapow address\n"
+                "    \"address\" : \"address\",  (string) the blobfish address\n"
                 "    \"label\" : \"label\",      (string) The associated label, or \"\" for the default label\n"
                 "    \"account\" : \"account\",  (string) DEPRECATED.This field will be removed in v5.0. To see this deprecated field, start blobfishd with -deprecatedrpc=accounts. Backwards compatible alias for label.\n"
                 "    \"scriptPubKey\" : \"key\", (string) the script key\n"

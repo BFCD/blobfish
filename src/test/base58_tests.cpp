@@ -14,7 +14,7 @@
 #include "uint256.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 #include <boost/test/unit_test.hpp>
 

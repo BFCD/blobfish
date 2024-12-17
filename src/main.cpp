@@ -2138,7 +2138,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    util::ThreadRename("peppapow-scriptch");
+    util::ThreadRename("blobfish-scriptch");
     scriptcheckqueue.Thread();
 }
 

@@ -11,7 +11,7 @@
 #include "script/script.h"
 #include "script/script_error.h"
 #include "script/sign.h"
-#include "test_peppapow.h"
+#include "test_blobfish.h"
 
 #ifdef ENABLE_WALLET
 #include "wallet/wallet_ismine.h"

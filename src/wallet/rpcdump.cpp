@@ -83,12 +83,12 @@ UniValue importprivkey(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() < 1 || request.params.size() > 4)
         throw std::runtime_error(
-            "importprivkey \"peppapowprivkey\" ( \"label\" rescan fStakingAddress )\n"
+            "importprivkey \"blobfishprivkey\" ( \"label\" rescan fStakingAddress )\n"
             "\nAdds a private key (as returned by dumpprivkey) to your wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"peppapowprivkey\"      (string, required) The private key (see dumpprivkey)\n"
+            "1. \"blobfishprivkey\"      (string, required) The private key (see dumpprivkey)\n"
             "2. \"label\"            (string, optional, default=\"\") An optional label\n"
             "3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions\n"
             "4. fStakingAddress      (boolean, optional, default=false) Whether this key refers to a (cold) staking address\n"
@@ -392,13 +392,13 @@ UniValue dumpprivkey(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() != 1)
         throw std::runtime_error(
-            "dumpprivkey \"peppapowaddress\"\n"
-            "\nReveals the private key corresponding to 'peppapowaddress'.\n"
+            "dumpprivkey \"blobfishaddress\"\n"
+            "\nReveals the private key corresponding to 'blobfishaddress'.\n"
             "Then the importprivkey can be used with this output\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"   (string, required) The peppapow address for the private key\n"
+            "1. \"blobfishaddress\"   (string, required) The blobfish address for the private key\n"
 
             "\nResult:\n"
             "\"key\"                (string) The private key\n"
@@ -537,12 +537,12 @@ UniValue bip38encrypt(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() != 2)
         throw std::runtime_error(
-            "bip38encrypt \"peppapowaddress\" \"passphrase\"\n"
-            "\nEncrypts a private key corresponding to 'peppapowaddress'.\n" +
+            "bip38encrypt \"blobfishaddress\" \"passphrase\"\n"
+            "\nEncrypts a private key corresponding to 'blobfishaddress'.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"peppapowaddress\"   (string, required) The peppapow address for the private key (you must hold the key already)\n"
+            "1. \"blobfishaddress\"   (string, required) The blobfish address for the private key (you must hold the key already)\n"
             "2. \"passphrase\"   (string, required) The passphrase you want the private key to be encrypted with - Valid special chars: !#$%&'()*+,-./:;<=>?`{|}~ \n"
 
             "\nResult:\n"
@@ -583,7 +583,7 @@ UniValue bip38decrypt(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() != 2)
         throw std::runtime_error(
-            "bip38decrypt \"peppapowaddress\" \"passphrase\"\n"
+            "bip38decrypt \"blobfishaddress\" \"passphrase\"\n"
             "\nDecrypts and then imports password protected private key.\n" +
             HelpRequiringPassphrase() + "\n"
 

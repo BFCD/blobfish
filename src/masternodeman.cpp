@@ -867,7 +867,7 @@ void ThreadCheckMasternodes()
     if (fLiteMode) return; //disable all Masternode related functionality
 
     // Make this thread recognisable as the wallet flushing thread
-    util::ThreadRename("peppapow-masternodeman");
+    util::ThreadRename("blobfish-masternodeman");
     LogPrintf("Masternodes thread started\n");
 
     unsigned int c = 0;

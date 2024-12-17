@@ -10,7 +10,7 @@
 #include "uint256.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "test_peppapow.h"
+#include "test_blobfish.h"
 
 #include <string>
 #include <vector>

@@ -100,7 +100,7 @@ SettingsInformationWidget::SettingsInformationWidget(BLOBFISHGUI* _window,QWidge
     });
     connect(ui->pushButtonFile, &QPushButton::clicked, [this](){
         if (!GUIUtil::openConfigfile())
-            inform(tr("Unable to open peppapow.conf with default application"));
+            inform(tr("Unable to open blobfish.conf with default application"));
     });
     connect(ui->pushButtonNetworkMonitor, &QPushButton::clicked, this, &SettingsInformationWidget::openNetworkMonitor);
 }

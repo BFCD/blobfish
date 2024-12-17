@@ -12,7 +12,7 @@
 #include "script/interpreter.h"
 #include "util.h"
 #include "version.h"
-#include "test_peppapow.h"
+#include "test_blobfish.h"
 
 #include <iostream>
 

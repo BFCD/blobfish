@@ -9,7 +9,7 @@
 #include "uint256.h"
 #include "version.h"
 #include "consensus/merkle.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 #include <vector>
 

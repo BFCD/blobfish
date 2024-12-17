@@ -9,7 +9,7 @@
 #include "serialize.h"
 #include "streams.h"
 
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 #include <boost/test/unit_test.hpp>
 

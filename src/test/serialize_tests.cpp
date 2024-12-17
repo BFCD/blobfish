@@ -6,7 +6,7 @@
 #include "serialize.h"
 #include "streams.h"
 #include "hash.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 #include <stdint.h>
 

@@ -206,7 +206,7 @@ bool Intro::pickDataDirectory()
     }
 
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the peppapow.conf file in the default data directory
+     * override -datadir in the blobfish.conf file in the default data directory
      * (to be consistent with blobfishd behavior)
      */
 

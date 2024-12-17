@@ -28,7 +28,7 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called BLOBFISH (http://www.peppapow.org),
+ * This is the developer documentation of the reference client for an experimental new digital currency called BLOBFISH (http://www.blobfish.org),
  * which enables instant payments to anyone, anywhere in the world. BLOBFISH uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
@@ -62,7 +62,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/peppapow.conf are parsed in qt/peppapow.cpp's main()
+    // If Qt is used, parameters/blobfish.conf are parsed in qt/blobfish.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
@@ -109,7 +109,7 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "peppapow:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "blobfish:"))
                 fCommandLine = true;
 
         if (fCommandLine) {

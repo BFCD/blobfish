@@ -46,10 +46,10 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Blobfish Core peppapow-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Blobfish Core blobfish-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
-                               "  peppapow-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded peppapow transaction") + "\n" +
-                               "  peppapow-tx [options] -create [commands]   " + _("Create hex-encoded peppapow transaction") + "\n" +
+                               "  blobfish-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded blobfish transaction") + "\n" +
+                               "  blobfish-tx [options] -create [commands]   " + _("Create hex-encoded blobfish transaction") + "\n" +
                                "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -564,7 +564,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw std::runtime_error("too few parameters");
 
-            // param: hex-encoded peppapow transaction
+            // param: hex-encoded blobfish transaction
             std::string strHexTx(argv[1]);
             if (strHexTx == "-") // "-" implies standard input
                 strHexTx = readStdin();

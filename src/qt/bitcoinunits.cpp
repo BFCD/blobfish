@@ -43,11 +43,11 @@ QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
     case BLOBFISH:
-        return QString("peppapow");
+        return QString("blobfish");
     case mBLOBFISH:
-        return QString("mpeppapow");
+        return QString("mblobfish");
     case uBLOBFISH:
-        return QString::fromUtf8("upeppapow");
+        return QString::fromUtf8("ublobfish");
     default:
         return QString("???");
     }

@@ -2599,7 +2599,7 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend,
                 if (nChange > 0) {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-peppapow-address
+                    // change transaction isn't always pay-to-blobfish-address
                     bool combineChange = false;
 
                     // coin control: send change to custom address

@@ -4,7 +4,7 @@
 
 #include "random.h"
 #include "utilstrencodings.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 #include "crypter.h"
 
 #include <vector>

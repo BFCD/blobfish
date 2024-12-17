@@ -12,7 +12,7 @@
 #include "fs.h"
 #include "main.h"
 #include "utiltime.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 #include <cstdio>
 

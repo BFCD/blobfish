@@ -4,7 +4,7 @@
 
 #include "compressor.h"
 #include "util.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 #include <stdint.h>
 

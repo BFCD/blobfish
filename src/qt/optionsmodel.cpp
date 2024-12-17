@@ -193,7 +193,7 @@ void OptionsModel::setDisplayDefaultOptions(QSettings& settings, bool reset)
         addOverriddenOption("-lang");
 
     if (settings.contains("nAnonymizeBlobfishAmount") || reset)
-        SoftSetArg("-anonymizepeppapowamount", settings.value("nAnonymizeBlobfishAmount").toString().toStdString());
+        SoftSetArg("-anonymizeblobfishamount", settings.value("nAnonymizeBlobfishAmount").toString().toStdString());
 
     if (!settings.contains("strThirdPartyTxUrls") || reset)
         settings.setValue("strThirdPartyTxUrls", "");
@@ -212,7 +212,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in peppapow.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in blobfish.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())

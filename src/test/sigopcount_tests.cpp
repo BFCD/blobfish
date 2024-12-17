@@ -8,7 +8,7 @@
 #include "script/script.h"
 #include "script/standard.h"
 #include "uint256.h"
-#include "test_peppapow.h"
+#include "test_blobfish.h"
 
 #include <vector>
 

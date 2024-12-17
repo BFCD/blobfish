@@ -12,7 +12,7 @@
 #include "uint256.h"
 #include <string>
 #include "version.h"
-#include "test/test_peppapow.h"
+#include "test/test_blobfish.h"
 
 BOOST_FIXTURE_TEST_SUITE(uint256_tests, BasicTestingSetup)
 
