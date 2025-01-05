@@ -30,11 +30,13 @@ bool CBlockHeader::IsKAWPOW() const
     return nTime >= fActivationKAWPOW;
 }
 
-uint256 CBlockHeader::GetHash() const
+uint256 CBlockHeader::GetHash(bool fFullHash) const
 {
     if (IsKAWPOW()) {
         uint256 mixHash;
-        return KAWPOWHash(*this, mixHash);
+        if (fFullHash)
+            return KAWPOWHash(*this, mixHash);
+        return KAWPOWHash_OnlyMix(*this);
     }
 
     uint256 thash;

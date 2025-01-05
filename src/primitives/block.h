@@ -86,7 +86,7 @@ public:
     }
 
     bool IsKAWPOW() const;
-    uint256 GetHash() const;
+    uint256 GetHash(bool fFullHash = false) const;
 
     int64_t GetBlockTime() const
     {
