@@ -194,11 +194,7 @@ public:
         pchMessageStart[3] = 0xa9;
         nDefaultPort = 50472;
 
-        vSeeds.push_back(CDNSSeedData("185.197.249.201", "185.197.249.201"));     
-        vSeeds.push_back(CDNSSeedData("31.42.185.167", "31.42.185.167"));   
-        vSeeds.push_back(CDNSSeedData("95.214.234.216", "95.214.234.216"));   
-        
-
+        // proper dns seeders go here, not nodes
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 64);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
